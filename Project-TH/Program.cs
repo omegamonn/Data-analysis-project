@@ -16,7 +16,7 @@ namespace Project_TH
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new XuLyDonHang());
+            Application.Run(new PhanLoaiPhanHoi());
         }
     }
 }

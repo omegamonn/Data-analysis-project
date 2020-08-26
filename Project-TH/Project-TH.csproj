@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PhanLoaiPhanHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanLoaiPhanHoi.Designer.cs">
+      <DependentUpon>PhanLoaiPhanHoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="XuLyDonHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PhanLoaiPhanHoi.resx">
+      <DependentUpon>PhanLoaiPhanHoi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="XuLyDonHang.resx">
       <DependentUpon>XuLyDonHang.cs</DependentUpon>
     </EmbeddedResource>
