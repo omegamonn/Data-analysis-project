@@ -2,7 +2,7 @@
 
 namespace DTO
 {
-   
+
     public class DONHANG_DTO
     {
         private string maDONHANG;
@@ -106,4 +106,32 @@ namespace DTO
             LuongTOITHIEU = LuongTT;
         }
     }
+    public class NHANVIEN_DTO
+    {
+        private string maNHANVIEN;
+
+        public string MaNHANVIEN { get => maNHANVIEN; set => maNHANVIEN = value; }
+
+        private string tenNV;
+        public string TenNV { get => tenNV; set => tenNV = value; }
+
+        private string sdtNV;
+        public string SDTNV { get => sdtNV; set => sdtNV = value; }
+
+        private string diachiNV;
+        public string DiaChiNV { get => diachiNV; set => diachiNV = value; }
+
+        private string chucvu;
+        public string ChucVu { get => chucvu; set => chucvu = value; }
+        public NHANVIEN_DTO(string maNV, string tenNV, string sdtNV, string diachiNV, string chucvu)
+        {
+            MaNHANVIEN = maNV;
+            TenNV = tenNV;
+            SDTNV = sdtNV;
+            DiaChiNV = DiaChiNV;
+            ChucVu = chucvu;
+        }
+
+    }
 }
+
