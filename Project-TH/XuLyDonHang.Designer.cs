@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -46,9 +47,14 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.qLBHDataSet = new Project_TH.QLBHDataSet();
+            this.nHANVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nHAN_VIENTableAdapter = new Project_TH.QLBHDataSetTableAdapters.NHAN_VIENTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.qLBHDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -131,6 +137,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(33, 20);
             this.textBox4.TabIndex = 8;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label5
             // 
@@ -171,6 +178,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(100, 21);
             this.comboBox2.TabIndex = 16;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -190,6 +198,7 @@
             // 
             // textBox7
             // 
+            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox7.Location = new System.Drawing.Point(105, 181);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(120, 20);
@@ -214,6 +223,20 @@
             this.button3.Text = "Hủy đơn hàng";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // qLBHDataSet
+            // 
+            this.qLBHDataSet.DataSetName = "QLBHDataSet";
+            this.qLBHDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // nHANVIENBindingSource
+            // 
+            this.nHANVIENBindingSource.DataMember = "NHAN_VIEN";
+            this.nHANVIENBindingSource.DataSource = this.qLBHDataSet;
+            // 
+            // nHAN_VIENTableAdapter
+            // 
+            this.nHAN_VIENTableAdapter.ClearBeforeFill = true;
+            // 
             // XuLyDonHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,11 +254,14 @@
             this.Controls.Add(this.button1);
             this.Name = "XuLyDonHang";
             this.Text = "Xu ly don hang";
+            this.Load += new System.EventHandler(this.XuLyDonHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.qLBHDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,6 +287,9 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button3;
+        private QLBHDataSet qLBHDataSet;
+        private System.Windows.Forms.BindingSource nHANVIENBindingSource;
+        private QLBHDataSetTableAdapters.NHAN_VIENTableAdapter nHAN_VIENTableAdapter;
     }
 }
 
